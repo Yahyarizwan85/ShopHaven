@@ -31,6 +31,9 @@ DEBUG = True
 ALLOWED_HOSTS = []
 
 
+DEBUG = False
+ALLOWED_HOSTS = ['*']  # Change this to your actual domain or localhost
+
 # Application definition
 
 INSTALLED_APPS = [
@@ -136,14 +139,7 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 import os
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, "static"),
-    # os.path.join(BASE_DIR, "carouselimage")
+
 ]
 
-# STATIC_URL = '/static/'
-# STATICFILES_DIRS = [
-#     os.path.join(BASE_DIR, "static")
-# ]
-
-# MEDIA_URL = '/media/'
-# MEDIA_ROOT = os.path.join(BASE_DIR, "media")
 

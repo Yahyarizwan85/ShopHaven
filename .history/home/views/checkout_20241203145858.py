@@ -1,5 +1,0 @@
-from django.views import View
-from django.shortcuts import render
-
-class Check_out():
-    
