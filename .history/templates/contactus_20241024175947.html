@@ -1,0 +1,38 @@
+{% extends "based.html" %}
+
+{% block title %}Conatct US {% endblock title %}
+
+{% block body %}
+<img src="/static/img/4jpj.jpg" class="d-block w-100" alt="...">
+<div class="container mb-3 py-4">
+<h1 class="text-center">Contact Us</h1>
+<form method="post" action="/contactus">
+ {% csrf_token %}
+    <div class="form-floating mb-3">
+  <input type="name" class="form-control" id="floatingInputDisabled" name="name" placeholder="Enter your Name" >
+  <label for="floatingInputDisabled">Name</label>
+</div>
+<div class="form-floating mb-3">
+  <input type="email" class="form-control" id="floatingInputDisabled" name="email" placeholder="Enter your email" >
+  <label for="floatingInputDisabled">Email address</label>
+</div>
+<div class="form-floating mb-3">
+  <input type="phone2numeric" class="form-control" id="floatingInputDisabled" name="Phone" placeholder="Enter your phone number" >
+  <label for="floatingInputDisabled">Phone number</label>
+</div>
+<div class="form- floating mb-3">
+    <label for="desc">Tell me what you wants to contact for</label>
+  <textarea type="desc" class="form-control" id="desc" rows="3" name="desc" ></textarea>
+</div>
+{% if messages %}
+{% for message in messages %}
+<button type="button" class="close"> data-dimiss="alert" Submit</button>
+<div class="alert alert-{{ message.tags }} alert-success" role="alert">
+  <strong>{{ message }}</strong>
+  {% endfor %}
+  {% endif %}
+
+
+
+</div>
+{% endblock body %}

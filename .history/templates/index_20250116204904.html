@@ -1,0 +1,116 @@
+{% extends "based.html" %}
+
+{% block title %}Home{% endblock title %}
+{% load custom %}
+{% load cart %}
+
+{% block body %}
+
+
+<!-- Hero Section -->
+<div class="container-fluid px-0">
+<div id="CarouselImg" class="carousel slide mb-4" data-bs-ride="carousel">
+  <div class="carousel-inner">
+    {% for item in carousel_items %}
+    <div class="carousel-item {% if forloop.first %}active{% endif %}">
+      <img src="{{ item.image.url }}" class="d-block w-100" alt="{{ item.title }}">
+      <div class="carousel-caption d-none d-md-block">
+        <h5>{{ item.title }}</h5>
+        <p>{{ item.description }}</p>
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#productCarousel" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#productCarousel" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>
+
+<!-- Featured Categories Section -->
+<div class="container my-5">
+  <h2 class="text-center mb-4">Explore Categories</h2>
+  <div class="row row-cols-2 row-cols-md-4 g-3">
+    <div class="col">
+      <div class="card shadow-sm">
+        <img src="/static/img/men.jpg" class="card-img-top" alt="Men's Wear">
+        <div class="card-body text-center">
+          <h5 class="card-title">Men's Wear</h5>
+          <a href="/shop" class="btn btn-secondary">Explore</a>
+        </div>
+      </div>
+    </div>
+    <div class="col">
+      <div class="card shadow-sm">
+        <img src="/static/img/women.jpg" class="card-img-top" alt="Women's Wear">
+        <div class="card-body text-center">
+          <h5 class="card-title">Women's Wear</h5>
+          <a href="/shop" class="btn btn-secondary">Explore</a>
+        </div>
+      </div>
+    </div>
+    <div class="col">
+      <div class="card shadow-sm">
+        <img src="/static/img/kids.jpg" class="card-img-top" alt="Kids' Wear">
+        <div class="card-body text-center">
+          <h5 class="card-title">Kids' Wear</h5>
+          <a href="/shop" class="btn btn-secondary">Explore</a>
+        </div>
+      </div>
+    </div>
+    <div class="col">
+      <div class="card shadow-sm">
+        <img src="/static/img/accessories.jpg" class="card-img-top" alt="Accessories">
+        <div class="card-body text-center">
+          <h5 class="card-title">Accessories</h5>
+          <a href="/shop" class="btn btn-secondary">Explore</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Customer Reviews Section -->
+<div class="container my-5">
+  <h2 class="text-center mb-4">Customer Reviews</h2>
+  <div id="reviewsCarousel" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <blockquote class="blockquote text-center">
+          <p class="mb-0">"Amazing Quality! Love shopping here!"</p>
+          <footer class="blockquote-footer">Ali R.</footer>
+        </blockquote>
+      </div>
+      <div class="carousel-item">
+        <blockquote class="blockquote text-center">
+          <p class="mb-0">"Fast delivery and fantastic service."</p>
+          <footer class="blockquote-footer">Sarah K.</footer>
+        </blockquote>
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#reviewsCarousel" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#reviewsCarousel" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    </button>
+  </div>
+</div>
+
+<!-- Contact Us / Newsletter Subscription -->
+<div class="container my-5 bg-light py-4 rounded">
+  <h4 class="text-center mb-3">Subscribe to Our Newsletter</h4>
+  <form action="/subscribe" method="POST" class="d-flex justify-content-center">
+    {% csrf_token %}
+    <input type="email" name="email" class="form-control w-50" placeholder="Enter your email here">
+    <button type="submit" class="btn btn-primary ms-2">Subscribe</button>
+  </form>
+</div>
+
+
+
+{% endblock body %}

@@ -1,0 +1,29 @@
+{% extends "based.html" %}
+
+{% block title %}Conatct US {% endblock title %}
+
+{% block body %}
+<img src="/static/img/4jpj.jpg" class="d-block w-100" alt="...">
+<div class="container mb-3 py-4">
+<h1 class="text-center">Contact Us</h1>
+    <div class="form-floating mb-3">
+  <input type="name" class="form-control" id="floatingInputDisabled" name="name" placeholder="Enter your Name" >
+  <label for="floatingInputDisabled">Name</label>
+</div>
+<div class="form-floating mb-3">
+  <input type="email" class="form-control" id="floatingInputDisabled" placeholder="Enter your email" >
+  <label for="floatingInputDisabled">Email address</label>
+</div>
+<div class="form-floating mb-3">
+  <input type="phone2numeric" class="form-control" id="floatingInputDisabled" placeholder="Enter your phone number" >
+  <label for="floatingInputDisabled">Phone number</label>
+</div>
+<div class="form- floating mb-3">
+    <label for="desc">Tell me what you wants to contact for</label>
+  <textarea type="desc" class="form-control" id="desc" rows="3" name="desc" ></textarea>
+</div>
+<button type="submit" class="btn btn-primary">Submit</button>
+</div>
+</div>
+
+{% endblock body %}

@@ -1,0 +1,155 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Smooth Navigation Link Animation */
+.animate-link {
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.animate-link:hover {
+    transform: scale(1.1);
+    color: #ffd700;
+    /* Highlight color */
+}
+
+/* Hero Animation */
+.container.mt-5 {
+    animation: fadeIn 1.5s ease;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+/* Order & Cart Responsive Cards */
+.card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Add smooth hover effects to all buttons */
+.btn:hover {
+    transform: scale(1.1);
+    transition: transform 0.2s ease;
+}
+
+/* Smooth card hover effect with animations */
+.product-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+ /* Responsive grid: Let Bootstrap handle the row-cols classes  */
+.row-cols-1,
+.row-cols-md-2,
+.row-cols-lg-3 { 
+    gap: 1.5rem;
+    /* Maintain spacing between cards
+}
+
+/* Button effects */
+.btn-add-cart {
+    background: linear-gradient(90deg, #ff9a9e, #fad0c4);
+    border: none;
+    color: white;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.btn-add-cart:hover {
+    background: linear-gradient(90deg, #fad0c4, #ffdde1);
+    transform: scale(1.05);
+    /* Slightly enlarge the button */
+}
+
+/* Hover effect for category menu links */
+.text-decoration-none:hover {
+    color: #ff9a9e;
+    transition: color 0.3s ease;
+}
+
+/* Make sure images in cards are responsive */
+.card-img-top {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+/* Remove body margin/padding to prevent gaps */
+/* body,
+html {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+/* Make carousel full width & height */
+#carousel_items {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+}
+
+/* Make images fully cover the viewport */
+.carousel-inner img {
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+    /* Ensures image covers full space */
+}
+
+/* Fix navigation buttons positioning */
+.carousel-control-prev,
+.carousel-control-next {
+    top: 50%;
+    transform: translateY(-50%);
+} */
+
+<style>.card-img-top {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.card {
+    max-height: 300px;
+    overflow: hidden;
+}
+
+</style>
+
+.card-img-top {
+    border-top-left-radius: 0.25rem;
+    border-top-right-radius: 0.25rem;
+}
+
+.card-title {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}

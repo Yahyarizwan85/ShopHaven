@@ -1,0 +1,39 @@
+from django.views import View
+from django.shortcuts import render, redirect
+from home.models import Product
+from home.customer import Customer
+from home.order import Order
+from django.contrib.auth.hashers import check_password, make_password
+from home.middleware.logguard import auth_middleware
+
+
+class Check_out(View):
+    def post(self, request):
+        address = request.POST.get('address')
+        phone = request.POST.get('phone')
+        customer = request.session.get('customer_id')
+        cart = request.session.get('cart')
+        products = Product.get_products_by_id(list(cart.keys()))
+
+        print(address, phone, customer, cart, products)
+        
+        user_customer.id = request.session['customer_id']
+        
+        if user_customer.id not in request.session['customer_id']:
+            return redirect('login')
+        else:
+            for product in products:
+                order = Order(
+                    customer=Customer(id=customer),
+                    product=product,
+                    price=product.price,
+                    address=address,
+                    phone=phone,
+                    quantity=cart.get(str(product.id))  # Ensure the key matches session data type
+                    )
+                order.save()
+                request.session['cart'] = {}
+                
+                return redirect('cart_Products')
+
+    
