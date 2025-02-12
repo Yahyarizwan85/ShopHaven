@@ -1,4 +1,0 @@
-requirements.txt
-django
-gunicorn
-whitenoise
