@@ -1,19 +1,19 @@
-# Ignore Python and Django files
-*.pyc
-__pycache__/
-*.sqlite3
+# # Ignore Python and Django files
+# *.pyc
+# __pycache__/
+# *.sqlite3
 
-# Ignore environment files
-.env
-venv/
-env/
+# # Ignore environment files
+# .env
+# venv/
+# env/
 
-# Ignore Django migrations
-*/migrations/*
+# # Ignore Django migrations
+# */migrations/*
 
-# Ignore static files (if needed)
-staticfiles/
+# # Ignore static files (if needed)
+# staticfiles/
 
-# Ignore IDE files
-.vscode/
-.idea/
+# # Ignore IDE files
+# .vscode/
+# .idea/

@@ -39,7 +39,7 @@ SECRET_KEY = 'django-insecure-0d5_ea23yd8^wx)f)+jbuy4h%*m+%qdx+(mb77@$qm6q#u45@8
 # ALLOWED_HOSTS = [ 'localhost', '127.0.0.1']  # Change this!
 
 
-# DEBUG = True
+# DEBUG = False
 # ALLOWED_HOSTS = ['*']  # Change this to your actual domain or localhost
 
 # Application definition
@@ -56,7 +56,6 @@ INSTALLED_APPS = [
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
-    'whitenoise.middleware.WhiteNoiseMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
@@ -152,4 +151,3 @@ STATICFILES_DIRS = [
 ]
 
 
-STATICSTORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'

@@ -152,4 +152,3 @@ STATICFILES_DIRS = [
 ]
 
 
-STATICSTORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
